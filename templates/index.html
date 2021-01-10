@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+    
+    
+  
+    .dropzone {
+      width: 100px;
+      height: 80px;
+      border: 1px dashed #999;
+      border-radius: 3px;
+      text-align: center;
+    }
+    
+    .upload-icon {
+      margin: 25px 2px 2px 2px;
+    }
+    
+    .upload-input {
+      position: relative;
+      top: -62px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+    
+    .btn {
+      display: block;
+      width: 140px;
+      height: 40px;
+      background: darkmagenta;
+      color: #fff;
+      border-radius: 3px;
+      border: 0;
+      box-shadow: 0 3px 0 0 hotpink;
+      transition: all 0.3s ease-in-out;
+      font-size: 14px;
+    }
+    
+    .btn:hover {
+      background: rebeccapurple;
+      box-shadow: 0 3px 0 0 deeppink;
+    }
+    
+    </style>
+
+
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Speech Emotion Detection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  
+  <link  href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+
+  <link  href="{{url_for('static', filename='icofont.min.css')}}" rel="stylesheet">
+
+  <link  href="{{url_for('static', filename='owl.carousel.min.css')}}" rel="stylesheet">
+
+  
+  
+  <link  href="{{url_for('static', filename='boxicons.min.css')}}" rel="stylesheet">
+  <link  href="{{url_for('static', filename='venobox.css')}}" rel="stylesheet">
+  <link  href="{{url_for('static', filename='aos.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  <link  href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html">Speech Emotion Detection</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+              <h1 class="text-center">Drop .wav file</h1>
+          
+                
+                <center>  
+                <form action="{{url_for('upload_file')}}" method="POST" id="form" enctype=multipart/form-data>
+                <div class="dropzone">	
+                  <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+            
+                  <input type="file" class="upload-input" name="file" id="file" form="form" />
+            
+                </div>
+              <button  type="submit"   class="download-btn"  value="Upload" name="uploadbutton" form="form"> Upload</button>
+               
+              </form>
+            </center>
+ 
+        </div>
+        <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+          <img src="{{url_for('static', filename='emotions.jpg')}}" class="img-fluid" alt="">
+        </div>
+      </div>
+</div>
+
+  </section><!-- End Hero -->
+
+  
+  
+
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container py-4">
+      <div class="copyright">
+        For any query ,contact at  <strong><span>  daniyal.bcs18@iba-suk.edu.pk</span></strong>
+      </div>
+      
+      <div class="credits">
+ 
+        Designed by <a href="#">Muhammad Daniyal Qureshi</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+
+  <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+  
+  <script src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
+
+  <script src="{{url_for('static', filename='jquery.easing.min.js')}}"></script>
+
+  <script src="{{url_for('static', filename='owl.carousel.min.js')}}"></script>
+
+  <script src="{{url_for('static', filename='venobox.min.js')}}"></script>
+
+  <script src="{{url_for('static', filename='aos.js')}}"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static', filename='main.js')}}"></script>
+</body>
+
+</html>
