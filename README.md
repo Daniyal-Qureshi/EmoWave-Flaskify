@@ -1,4 +1,3 @@
-Trained Deep learning MLP classifier to detect emotion based on the given voice, total targeted classes are 5(calm,disgust,fearful,happy,sad).
 
 
 
